@@ -62,7 +62,7 @@ class Uploads:
     """Class dedicated to all "uploads" related endpoints"""
 
     # Retry until the unpack agent is finished
-    @retry(retry=retry_if_exception_type(TryAgain), stop=stop_after_attempt(10))
+    @retry(retry=retry_if_exception_type(TryAgain), stop=stop_after_attempt(50))    # changed to 50 to prevent timeouts
     def detail_upload(
         self, upload_id: int, group: str = None, wait_time: int = 0
     ) -> Upload:
@@ -75,7 +75,7 @@ class Uploads:
 
         If ``wait_time`` is 0, the time interval specified by the ``Retry-After`` header is used.
 
-        The function stops trying after **10 attempts**.
+        The function stops trying after **50 attempts**.
 
         :Examples:
 
@@ -95,7 +95,7 @@ class Uploads:
         :rtype: Upload
         :raises FossologyApiError: if the REST call failed
         :raises AuthorizationError: if the user can't access the group
-        :raises TryAgain: if the upload times out after 10 retries
+        :raises TryAgain: if the upload times out after 50 retries
         """
         headers = {}
         if group:
