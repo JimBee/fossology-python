@@ -1,4 +1,4 @@
-|License| |PyPI Version| |Python Version| |Static Checks| |Fossology Tests| |Coverage|
+|License| |PyPI Version| |Python Version| |Downloads| |Static Checks| |Fossology Tests| |Coverage|
 
 .. |License| image:: https://img.shields.io/badge/license-MIT-blue.svg
    :target: https://github.com/deveaud-m/fossology-python/LICENSE.md
@@ -9,6 +9,9 @@
 .. |Python Version| image:: https://img.shields.io/badge/python-3.7%2C3.8%2C3.9-blue?logo=python
    :target: https://www.python.org/doc/versions/
 
+.. |Downloads| image:: https://static.pepy.tech/badge/fossology
+   :target: https://pepy.tech/project/fossology
+
 .. |Static Checks| image:: https://github.com/deveaud-m/fossology-python/workflows/Static%20Checks/badge.svg
    :target: https://github.com/deveaud-m/fossology-python/actions?query=workflow%3A%22Static+Checks%22
 
@@ -17,6 +20,7 @@
 
 .. |Coverage| image:: https://codecov.io/gh/fossology/fossology-python/branch/master/graph/badge.svg
    :target: https://codecov.io/gh/fossology/fossology-python
+   
 
 A simple wrapper for the Fossology REST API.
 
@@ -27,6 +31,13 @@ See `the OpenAPI specification <https://raw.githubusercontent.com/fossology/foss
    - 1.2.1 (Fossology 3.10.0)
    - 1.3.2 (Fossology 3.11.0)
    - 1.4.0 (Fossology 4.0.0)
+   - 1.4.3 (Fossology 4.1.0)
+
+**NOTE**
+
+   Version 2.0.0 of `fossology-python` only supports Fossology API version 1.4.3 onwards because of a breaking change in
+   the version format returned by the API. Other earlier version of the wrapper support a wider range of API versions,
+   e.g. 1.5.0 supports Fossology API 1.2.1 to 1.4.0.
 
 Documentation
 =============
